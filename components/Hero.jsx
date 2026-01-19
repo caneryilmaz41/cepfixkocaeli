@@ -72,15 +72,23 @@ export default function Hero() {
           {/* Visual/Image Area */}
           <div className="lg:w-1/2 relative flex justify-center lg:justify-end">
              <div className="relative z-10 animate-float max-w-lg w-full">
-                {/* Original Image Restored - No Mockup Frame */}
-                <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.2)] border border-white/5 lg:rotate-3 hover:rotate-0 transition-transform duration-700">
-                   <img 
-                      src="/hero-character.jpg" 
-                      alt="Telefon Tamir Uzmanı" 
-                      className="w-full h-auto object-cover"
-                   />
-                   {/* Decorative Vignet */}
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+                {/* Original Image Restored - Background Blended/Removed with CSS Mask */}
+                <div 
+                   className="relative w-full max-w-[420px] mx-auto group"
+                   style={{
+                     maskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)',
+                     WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)'
+                   }}
+                >
+                   <div className="relative rounded-[3rem] overflow-hidden shadow-[0_0_100px_rgba(249,115,22,0.2)]">
+                      <img 
+                         src="/hero-character.jpg" 
+                         alt="Telefon Tamir Uzmanı" 
+                         className="w-full h-auto object-cover scale-110 group-hover:scale-100 transition-transform duration-1000 contrast-125 brightness-90 grayscale-[0.2]"
+                      />
+                      {/* Deep Blending Gradients */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                   </div>
                 </div>
              </div>
              
