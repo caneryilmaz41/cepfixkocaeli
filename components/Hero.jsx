@@ -70,34 +70,22 @@ export default function Hero() {
           </div>
 
           {/* Visual/Image Area */}
-          <div className="lg:w-1/2 relative">
-             <div className="relative z-10 animate-float">
-                {/* Real Phone Look Container */}
-                <div className="relative mx-auto border-gray-900 dark:border-gray-900 bg-gray-900 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
-                  {/* Notch / Dynamic Island */}
-                  <div className="w-[120px] h-[30px] bg-gray-900 rounded-b-[1rem] absolute left-1/2 -translate-x-1/2 top-0 z-20"></div>
-                  
-                  {/* Side Buttons */}
-                  <div className="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
-                  <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-                  <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-                  <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-
-                  {/* Screen Content */}
-                  <div className="rounded-[2rem] overflow-hidden w-full h-full bg-slate-800 relative">
-                     <img 
-                        src="/hero-character.jpg" 
-                        alt="Telefon Tamir Uzmanı" 
-                        className="w-full h-full object-cover"
-                     />
-                     {/* Glossy reflection */}
-                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/10 rounded-[2rem]"></div>
-                  </div>
+          <div className="lg:w-1/2 relative flex justify-center lg:justify-end">
+             <div className="relative z-10 animate-float max-w-lg w-full">
+                {/* Original Image Restored - No Mockup Frame */}
+                <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.2)] border border-white/5 lg:rotate-3 hover:rotate-0 transition-transform duration-700">
+                   <img 
+                      src="/hero-character.jpg" 
+                      alt="Telefon Tamir Uzmanı" 
+                      className="w-full h-auto object-cover"
+                   />
+                   {/* Decorative Vignet */}
+                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
                 </div>
              </div>
              
-             {/* Decorative Elements behind phone */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/20 rounded-full blur-[100px] -z-10"></div>
+             {/* Decorative Elements behind image */}
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 rounded-full blur-[100px] -z-10"></div>
           </div>
         </div>
       </div>
